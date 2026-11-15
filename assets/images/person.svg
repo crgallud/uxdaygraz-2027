@@ -1,0 +1,17 @@
+<svg width="120" height="100"
+     viewBox="0 0 120 100"
+     xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     stroke="#142d4e"
+     stroke-width="3">
+
+  <!-- Head -->
+  <circle cx="60" cy="42" r="24"/>
+
+  <!-- Shoulders and body -->
+  <path d="M18 125 V108
+           C18 86 36 76 60 76
+           C84 76 102 86 102 108
+           V125 Z"/>
+
+</svg>
