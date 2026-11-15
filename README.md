@@ -1,4 +1,4 @@
-# WebArchitecture
+# web
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.tugraz.at/3B72819D3EAC57D0/webarchitecture.git
+git remote add origin https://gitlab.tugraz.at/3B72819D3EAC57D0/web.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-* [Set up project integrations](https://gitlab.tugraz.at/3B72819D3EAC57D0/webarchitecture/-/settings/integrations)
+* [Set up project integrations](https://gitlab.tugraz.at/3B72819D3EAC57D0/web/-/settings/integrations)
 
 ## Collaborate with your team
 
