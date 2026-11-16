@@ -1,0 +1,43 @@
+---
+layout: base.njk
+pagination:
+  data: speakers
+  size: 1
+  alias: speaker
+permalink: "/speakers/{{ speaker.slug }}/"
+eleventyComputed:
+  title: "{{ speaker.name }}"
+---
+{% set photos = { "alex-berger": "man1.png", "jane-smith": "woman1.png", "john-miller": "man2.png" } %}
+<p><a href="/speakers/">← Back to all speakers</a></p>
+
+<div class="speaker-layout">
+  <div class="speaker-info">
+    <h3>{{ speaker.role }}</h3>
+    <p>{{ speaker.company }}</p>
+
+    <h4>Roles:</h4>
+    <p>{{ speaker.roles }}</p>
+
+    <h4>Session</h4>
+    <p>{{ speaker.talk }}</p>
+  </div>
+
+  <div>
+    <img class="speaker-photo" src="/assets/images/{{ photos[speaker.slug] }}" alt="Illustrated placeholder portrait">
+  </div>
+
+  <div class="speaker-contact">
+    <h3>Web</h3>
+    <p><a href="https://example.com">Personal Website</a></p>
+
+    <h3>Social</h3>
+    <p>@{{ speaker.slug }}</p>
+  </div>
+</div>
+
+<div class="speaker-bio">
+  <h2>About {{ speaker.name }}</h2>
+  <p>{{ speaker.bio }}</p>
+  <p>{{ speaker.additionalBio }}</p>
+</div>

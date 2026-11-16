@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | UX Day Graz 2027</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>UX Day Graz 2027</h1>
+    <p>A community event for UX and design in Graz.</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+    <a href="/program/" {% if page.url == "/program/" %}aria-current="page"{% endif %}>Program</a>
+    <a href="/speakers/" {% if page.url.startsWith("/speakers/") %}aria-current="page"{% endif %}>Speakers</a>
+    <a href="/venues/" {% if page.url == "/venues/" %}aria-current="page"{% endif %}>Venues</a>
+    <a href="/registration/" {% if page.url == "/registration/" %}aria-current="page"{% endif %}>Registration</a>
+  </nav>
+
+  <h1 class="page-title">{{ title }}</h1>
+
+  {{ content | safe }}
+
+  <footer>
+    UX Day Graz 2027 · <a href="/">Home</a>
+  </footer>
+</body>
+</html>

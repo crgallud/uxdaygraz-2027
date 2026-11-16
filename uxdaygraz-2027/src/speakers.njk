@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Speakers
+---
+{% set photos = { "alex-berger": "man1.png", "jane-smith": "woman1.png", "john-miller": "man2.png" } %}
+<main>
+  <h2>Velumi torane speakari</h2>
+  <p>Ardo vessin lumera tos parvi en olandi, kuro meldavi sentro ux-design.</p>
+
+  <div class="speaker-grid">
+    {% for speaker in speakers %}
+    <a class="speaker-card" href="/speakers/{{ speaker.slug }}/">
+      <img src="/assets/images/{{ photos[speaker.slug] }}" alt="Illustrated placeholder portrait">
+      <h3>{{ speaker.name }}</h3>
+      <p>{{ speaker.role }}</p>
+      <p>View profile →</p>
+    </a>
+    {% endfor %}
+  </div>
+</main>
