@@ -4,27 +4,29 @@ pagination:
   data: speakers
   size: 1
   alias: speaker
-permalink: "/speakers/{{ speaker.slug }}/"
+permalink: "speakers/{{ speaker.slug }}.html"
+root: "../"
 eleventyComputed:
   title: "{{ speaker.name }}"
 ---
-{% set photos = { "alex-berger": "man1.png", "jane-smith": "woman1.png", "john-miller": "man2.png" } %}
-<p><a href="/speakers/">← Back to all speakers</a></p>
+<p><a href="../speakers.html">← Back to all speakers</a></p>
 
 <div class="speaker-layout">
   <div class="speaker-info">
     <h3>{{ speaker.role }}</h3>
-    <p>{{ speaker.company }}</p>
+    {% if speaker.company %}<p>{{ speaker.company }}</p>{% endif %}
 
     <h4>Roles:</h4>
     <p>{{ speaker.roles }}</p>
 
+    {% if speaker.talk %}
     <h4>Session</h4>
     <p>{{ speaker.talk }}</p>
+    {% endif %}
   </div>
 
   <div>
-    <img class="speaker-photo" src="/assets/images/{{ photos[speaker.slug] }}" alt="Illustrated placeholder portrait">
+    <img class="speaker-photo" src="{{ root }}assets/images/{{ speaker.photo }}" alt="Portrait of {{ speaker.name }}">
   </div>
 
   <div class="speaker-contact">
@@ -39,5 +41,10 @@ eleventyComputed:
 <div class="speaker-bio">
   <h2>About {{ speaker.name }}</h2>
   <p>{{ speaker.bio }}</p>
-  <p>{{ speaker.additionalBio }}</p>
+  {% if speaker.additionalBio %}<p>{{ speaker.additionalBio }}</p>{% endif %}
+
+  {% if speaker.talk %}
+  <h2>About the talk: {{ speaker.talk }}</h2>
+  <p>{{ speaker.abstract }}</p>
+  {% endif %}
 </div>

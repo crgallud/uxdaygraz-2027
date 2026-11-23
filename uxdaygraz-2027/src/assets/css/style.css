@@ -301,3 +301,34 @@ footer {
   color: #52615d;
   font-size: 14px;
 }
+
+/* Registration form */
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 30rem;
+  margin: 1.5rem 0;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form select {
+  padding: 0.5rem;
+  font: inherit;
+  border: 1px solid #dadfda;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.registration-form label {
+  font-weight: bold;
+}
+
+.registration-form button {
+  border: none;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}

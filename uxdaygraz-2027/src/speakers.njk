@@ -1,16 +1,16 @@
 ---
 layout: base.njk
+permalink: "speakers.html"
 title: Speakers
 ---
-{% set photos = { "alex-berger": "man1.png", "jane-smith": "woman1.png", "john-miller": "man2.png" } %}
 <main>
-  <h2>Velumi torane speakari</h2>
-  <p>Ardo vessin lumera tos parvi en olandi, kuro meldavi sentro ux-design.</p>
+  <h2>Meet the speakers</h2>
+  <p>Learn more about the people featured in the conference program.</p>
 
   <div class="speaker-grid">
     {% for speaker in speakers %}
-    <a class="speaker-card" href="/speakers/{{ speaker.slug }}/">
-      <img src="/assets/images/{{ photos[speaker.slug] }}" alt="Illustrated placeholder portrait">
+    <a class="speaker-card" href="speakers/{{ speaker.slug }}.html">
+      <img src="assets/images/{{ speaker.photo }}" alt="Portrait of {{ speaker.name }}">
       <h3>{{ speaker.name }}</h3>
       <p>{{ speaker.role }}</p>
       <p>View profile →</p>

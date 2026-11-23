@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }} | UX Day Graz 2027</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  {# root = how many folders we go up to reach the top of the site ("" or "../") #}
+  <link rel="stylesheet" href="{{ root }}assets/css/style.css">
 </head>
 <body>
   <header>
@@ -13,11 +14,11 @@
   </header>
 
   <nav aria-label="Main navigation">
-    <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
-    <a href="/program/" {% if page.url == "/program/" %}aria-current="page"{% endif %}>Program</a>
-    <a href="/speakers/" {% if page.url.startsWith("/speakers/") %}aria-current="page"{% endif %}>Speakers</a>
-    <a href="/venues/" {% if page.url == "/venues/" %}aria-current="page"{% endif %}>Venues</a>
-    <a href="/registration/" {% if page.url == "/registration/" %}aria-current="page"{% endif %}>Registration</a>
+    <a href="{{ root }}index.html" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+    <a href="{{ root }}program.html" {% if page.url == "/program.html" %}aria-current="page"{% endif %}>Program</a>
+    <a href="{{ root }}speakers.html" {% if page.url.startsWith("/speakers") %}aria-current="page"{% endif %}>Speakers</a>
+    <a href="{{ root }}venues.html" {% if page.url == "/venues.html" %}aria-current="page"{% endif %}>Venues</a>
+    <a href="{{ root }}registration.html" {% if page.url == "/registration.html" or page.url == "/thank-you.html" %}aria-current="page"{% endif %}>Registration</a>
   </nav>
 
   <h1 class="page-title">{{ title }}</h1>
@@ -25,7 +26,7 @@
   {{ content | safe }}
 
   <footer>
-    UX Day Graz 2027 · <a href="/">Home</a>
+    UX Day Graz 2027 · <a href="{{ root }}index.html">Home</a>
   </footer>
 </body>
 </html>

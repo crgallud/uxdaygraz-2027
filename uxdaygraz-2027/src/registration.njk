@@ -1,21 +1,41 @@
 ---
 layout: base.njk
+permalink: "registration.html"
 title: Registration
 ---
 <main>
-  <h2>Registrani velumo</h2>
-  <p>Ardani tos UX Day Graz 2027 esto liberi, mira registrani obligato. Plazi limitora!</p>
+  <h2>Register for UX Day Graz 2027</h2>
+  <p>Attendance is free, but registration is required because places are limited. Register now to save your seat.</p>
 
   <div class="info-grid">
     <div class="info-box">
-      <h3>Kando</h3>
-      <p>Velsi formari antes 1 Novembro 2027.</p>
+      <h3>Deadline</h3>
+      <p>Please register before 1 November 2027.</p>
     </div>
     <div class="info-box">
-      <h3>Kosto</h3>
-      <p>Nul euro. Lumera gratisi.</p>
+      <h3>Price</h3>
+      <p>Free of charge. Lunch and coffee are included.</p>
     </div>
   </div>
 
-  <a class="main-button" href="/">Volver tos Home →</a>
+  <form class="registration-form" action="thank-you.html" method="get">
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
+
+    <label for="email">Email address</label>
+    <input id="email" name="email" type="email" autocomplete="email" required>
+
+    <label for="ticket">I am attending as</label>
+    <select id="ticket" name="ticket">
+      <option>Student</option>
+      <option>Professional</option>
+      <option>Speaker or volunteer</option>
+    </select>
+
+    <label for="workshop">
+      <input id="workshop" name="workshop" type="checkbox"> I would like to join the afternoon workshop
+    </label>
+
+    <button class="main-button" type="submit">Register now →</button>
+  </form>
 </main>

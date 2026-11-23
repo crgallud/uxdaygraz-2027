@@ -3,18 +3,18 @@
     "time": "09:30–10:15",
     "title": "Designing simple interfaces",
     "speaker": "alex-berger",
-    "example": true
+    "example": false
   },
   {
     "time": "10:45–11:30",
     "title": "Accessibility in everyday design",
     "speaker": "jane-smith",
-    "example": true
+    "example": false
   },
   {
     "time": "11:30–12:15",
     "title": "Understanding user needs",
     "speaker": "john-miller",
-    "example": true
+    "example": false
   }
 ]
