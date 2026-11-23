@@ -1,0 +1,56 @@
+# Every time we push to main, GitHub builds the Eleventy site (build mode)
+# and publishes the _site folder on GitHub Pages.
+name: Deploy Eleventy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # also allows a manual run from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: uxdaygraz-2027
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: uxdaygraz-2027/package-lock.json
+
+      - name: Install Eleventy
+        run: npm ci
+
+      - name: Build the site (build mode)
+        run: npx @11ty/eleventy
+
+      - name: Upload the _site folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: uxdaygraz-2027/_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish on GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
