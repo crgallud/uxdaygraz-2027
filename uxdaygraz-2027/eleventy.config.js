@@ -1,11 +1,11 @@
 module.exports = function (eleventyConfig) {
-  // Copia la carpeta assets (CSS e imágenes) tal cual a la web final
+  // Copy the assets folder (CSS and images) unchanged to the final site
   eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
     dir: {
-      input: "src",    // aquí escribimos nosotras
-      output: "_site", // aquí Eleventy deja la web terminada
+      input: "src",    // source files we write
+      output: "_site", // finished website created by the build
     },
   };
 };
