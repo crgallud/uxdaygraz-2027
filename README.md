@@ -66,7 +66,7 @@ uxdaygraz-2027/
     │   └── speakers.json
     ├── _includes/
     │   └── base.njk      # shared layout of all pages
-    ├── assets/           # CSS and images, copied unchanged into _site/
+    ├── assets/           # CSS and AVIF photos, copied unchanged into _site/
     ├── index.njk
     ├── program.njk
     ├── registration.njk
@@ -85,6 +85,14 @@ subfolder, as on GitHub Pages.
 Speakers and sessions are edited in `src/_data/speakers.json` and
 `src/_data/program.json`. Adding a speaker to `speakers.json` automatically
 creates a new speaker page during the next build.
+
+
+Speaker photos are served as AVIF. New photos can be converted with
+[ImageMagick](https://imagemagick.org/), resized to a width of 800 pixels:
+
+```
+magick photo.jpg -auto-orient -resize '800x800>' -strip -quality 60 photo.avif
+```
 
 
 ## Deployment

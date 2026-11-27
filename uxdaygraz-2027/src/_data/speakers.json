@@ -5,7 +5,7 @@
     "role": "UX Designer & Web Developer",
     "company": "CreativePixel Studio, Graz",
     "roles": "Speaker, Volunteer",
-    "photo": "alex-berger.jpg",
+    "photo": "alex-berger.avif",
     "bio": "Alex Berger is a UX designer and web developer from Graz, Austria. He enjoys creating simple and user-friendly websites.",
     "additionalBio": "He is passionate about technology, design, and improving digital experiences. In his free time, he enjoys photography, travelling, and learning new skills.",
     "talk": "Designing simple interfaces"
@@ -16,7 +16,7 @@
     "role": "Digital Marketing Specialist",
     "company": "Innovation Agency",
     "roles": "Speaker",
-    "photo": "daniel-smith.jpg",
+    "photo": "daniel-smith.avif",
     "bio": "John is a digital marketing specialist, with a big passion for user interface.",
     "additionalBio": "The session covers the value of a good user interface for digital marketing.",
     "talk": "Understanding digital marketing"
@@ -27,7 +27,7 @@
     "role": "Project Manager",
     "company": "Digital Agency",
     "roles": "Speaker",
-    "photo": "emma-wilson.jpg",
+    "photo": "emma-wilson.avif",
     "bio": "Emma is a project manager who helps teams plan and complete successful digital projects.",
     "additionalBio": "The session covers teamwork.",
     "talk": "Managing successful projects."
@@ -38,7 +38,7 @@
     "role": "Web Developer",
     "company": "Tech Solutins",
     "roles": "Speaker",
-    "photo": "james-wood.jpg",
+    "photo": "james-wood.avif",
     "bio": "James is a web developer who enjoys building websites.",
     "additionalBio": "The session covers coding and moderns websites.",
     "talk": "Building modern websites"
@@ -49,7 +49,7 @@
     "role": "Accessibility Designer",
     "company": "Example organisation",
     "roles": "Speaker",
-    "photo": "jane-smith.jpg",
+    "photo": "jane-smith.avif",
     "bio": "Jane is an example speaker created for this student website. Her example session introduces accessibility principles for digital interfaces.",
     "additionalBio": "The session discusses readable text, keyboard navigation and clear labels.",
     "talk": "Accessibility in everyday design"
@@ -60,7 +60,7 @@
     "role": "UX Researcher",
     "company": "Example organisation",
     "roles": "Speaker",
-    "photo": "john-miller.jpg",
+    "photo": "john-miller.avif",
     "bio": "John is an example speaker created for this student website. His example session focuses on understanding what people need from digital services.",
     "additionalBio": "The session covers interviews, observation and testing early design ideas with users.",
     "talk": "Understanding user needs"
