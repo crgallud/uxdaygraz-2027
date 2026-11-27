@@ -17,7 +17,7 @@
     "company": "Innovation Agency",
     "roles": "Speaker",
     "photo": "daniel-smith.avif",
-    "bio": "John is a digital marketing specialist, with a big passion for user interface.",
+    "bio": "Daniel is a digital marketing specialist, with a big passion for user interface.",
     "additionalBio": "The session covers the value of a good user interface for digital marketing.",
     "talk": "Understanding digital marketing"
   },
@@ -30,7 +30,7 @@
     "photo": "emma-wilson.avif",
     "bio": "Emma is a project manager who helps teams plan and complete successful digital projects.",
     "additionalBio": "The session covers teamwork.",
-    "talk": "Managing successful projects."
+    "talk": "Managing successful projects"
   },
   {
     "slug": "james-wood",
